@@ -20,11 +20,11 @@ Open `config.json` and replace the default values with yours:
   ]
 }
 ```
-* `username` is your Instagram username
-* `password` is it's corresponding password
-* `name` is the bold name above your biography
-* `prefix` is a piece of text that is always displayed before your content
-* `affix` is a piece of text that is always displayed after your content
+* `username` is your Instagram username.
+* `password` is it's corresponding password.
+* `name` is the bold name above your biography.
+* `prefix` is a piece of text that is always displayed before your content.
+* `affix` is a piece of text that is always displayed after your content.
 * `interval` is the interval between updates __in hours__ to prevent exceedance of Instagram's API rate limit of 200 requests per hour.
 * `shuffle` determines whether the content should be shuffled or displayed in order of input.
 * `content` is an array containing your biographies Bioshufflr should iterate through.
