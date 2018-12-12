@@ -31,6 +31,8 @@ Open `config.json` and replace the default values with yours:
 
 **NOTE:** Don't forget to add `\n` after your prefix or before your affix if you want to insert a new line.
 
+Lastly, update `cookies/yourusername.json` with your own Instagram username.
+
 ## Usage
 
 You can run Bioshufflr by running `node app` in the command line. Just make sure you are in the project's root directory.
