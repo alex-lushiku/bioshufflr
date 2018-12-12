@@ -31,8 +31,7 @@ Bioshufflr is a program that periodically updates your Instagram biography.
 
 **NOTE:** Don't forget to add `\n` after your prefix or before your affix if you want to insert a new line. Same goes for `\"` If you want to insert quotes.
 
-2. Update `cookies/yourusername.json` with your own Instagram username.
-3. Run `npm install` to install all corresponding packages.
+2. Run `npm install` to install all corresponding packages.
 
 ## Usage
 
