@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 const fs = require('fs');
 const shuffle_array = require('shuffle-array');
 const Client = require('instagram-private-api').V1;

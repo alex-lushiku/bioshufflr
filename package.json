@@ -1,0 +1,31 @@
+{
+  "name": "bioshufflr",
+  "version": "0.1.0",
+  "description": "Bioshufflr is a program that periodically updates your Instagram biography.",
+  "main": "app.js",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "instagram-private-api": "^0.6.8",
+    "shuffle-array": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alex-lushiku/bioshufflr.git"
+  },
+  "keywords": [
+    "instagram",
+    "social",
+    "media",
+    "automation"
+  ],
+  "author": "Alex Lushiku",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alex-lushiku/bioshufflr/issues"
+  },
+  "homepage": "https://github.com/alex-lushiku/bioshufflr#readme"
+}
