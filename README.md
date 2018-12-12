@@ -4,7 +4,7 @@ Bioshufflr is a program that periodically updates your Instagram biography.
 
 ## Setup
 
-Open `config.json` and replace the default values with yours:
+1. Open `config.json` and replace the default values with yours:
 ```javascript
 {
   "username": "yourusername",
@@ -20,18 +20,19 @@ Open `config.json` and replace the default values with yours:
   ]
 }
 ```
-* `username` is your Instagram username.
-* `password` is it's corresponding password.
-* `name` is the bold name above your biography.
-* `prefix` is a piece of text that is always displayed before your content.
-* `affix` is a piece of text that is always displayed after your content.
-* `interval` is the interval between updates __in hours__ to prevent exceedance of Instagram's API rate limit of 200 requests per hour.
-* `shuffle` determines whether the content should be shuffled or displayed in order of input.
-* `content` is an array containing your biographies Bioshufflr should iterate through.
+ * `username` is your Instagram username.
+ * `password` is it's corresponding password.
+ * `name` is the bold name above your biography.
+ * `prefix` is a piece of text that is always displayed before your content.
+ * `affix` is a piece of text that is always displayed after your content.
+ * `interval` is the interval between updates __in hours__ to prevent exceedance of Instagram's API rate limit of 200 requests per hour.
+ * `shuffle` determines whether the content should be shuffled or displayed in order of input.
+ * `content` is an array containing your biographies Bioshufflr should iterate through.
 
-**NOTE:** Don't forget to add `\n` after your prefix or before your affix if you want to insert a new line.
+**NOTE:** Don't forget to add `\n` after your prefix or before your affix if you want to insert a new line. Same goes for `\"` If you want to insert quotes.
 
-Lastly, update `cookies/yourusername.json` with your own Instagram username.
+2. Update `cookies/yourusername.json` with your own Instagram username.
+3. Run `npm install` to install all corresponding packages.
 
 ## Usage
 
