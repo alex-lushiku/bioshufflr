@@ -5,10 +5,12 @@
   "main": "app.js",
   "dependencies": {
     "dotenv": "^6.2.0",
-    "instagram-private-api": "^0.6.8",
+    "instagram-private-api": "^1.18.0",
     "shuffle-array": "^1.0.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "lodash.merge": "^4.6.2"
+  },
   "scripts": {
     "test": "node app"
   },
