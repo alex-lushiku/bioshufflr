@@ -24,5 +24,5 @@ Client.Session.create(device, storage, user, config['password'])
 
       if (iterator < content.length-1) iterator++;
       else iterator = 0;
-    }, config['interval'] * Math.pow(60, 2));
+    }, config['interval'] * 3600000);
   });
