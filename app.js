@@ -1,28 +1,41 @@
-const fs = require('fs');
-const shuffle_array = require('shuffle-array');
-const Client = require('instagram-private-api').V1;
-const config = require('./config.json');
+require('dotenv').config()
+const shuffle_array = require('shuffle-array')
+const { IgApiClient, IgCheckpointError } = require('instagram-private-api')
+const inquirer = require('inquirer')
+const ig = new IgApiClient()
 
-const user = config['username'];
-const device = new Client.Device(user);
-const storage = new Client.CookieFileStorage(__dirname + '/cookies/' + user + '.json');
+const config = require('./config.json')
+const user = config['username']
+var content = config['content']
 
-var content = config['content'];
+if (config['shuffle'])
+  shuffle_array(content)
 
-if (config['shuffle']) shuffle_array(content);
+ig.state.generateDevice(process.env.IG_USER)
 
-// Sign In
-Client.Session.create(device, storage, user, config['password'])
-  .then(function (session) {
-    var iterator = 0;
+const setBiography = (i) => {
+  ig.account.setBiography(`${config['prefix']}${content[i]}${config['affix']}`)
 
-    setInterval(function () {
-      Client.Account.editProfile(session, {
-        first_name: config['name'],
-        biography: config['prefix'] + content[iterator] + config['affix']
-      });
+  if (i < content.length) i++
+  else i = 0
+}
 
-      if (iterator < content.length-1) iterator++;
-      else iterator = 0;
-    }, config['interval'] * 3600000);
-  });
+ig.account
+  .login(process.env.IG_USER, process.env.IG_PASS)
+  .then(user => {
+    let iterator = 0
+    setBiography(iterator)
+    setInterval(setBiography, config['interval'] * 3600000)
+  }).catch(e => console.error(e))
+  .catch(async (e) => {
+    await ig.challenge.auto(true); // Requesting sms-code or click "It was me" button
+    const { code } = await inquirer.prompt([
+      {
+        type: 'input',
+        name: 'code',
+        message: 'Enter code',
+      },
+    ]);
+    console.log(await ig.challenge.sendSecurityCode(code));
+  })
+  .catch(e => console.error(e))

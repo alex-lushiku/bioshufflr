@@ -1,13 +1,9 @@
 {
-  "username": "yourusername",
-  "password": "yourpassword",
-  "name": "Your Name",
   "prefix": "",
   "affix": "",
   "interval": 1,
   "shuffle": true,
   "content": [
-    "example phrase one",
-    "example phrase two"
+    ""
   ]
 }

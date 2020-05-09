@@ -5,7 +5,8 @@
   "main": "app.js",
   "dependencies": {
     "dotenv": "^6.2.0",
-    "instagram-private-api": "^1.18.0",
+    "inquirer": "^7.1.0",
+    "instagram-private-api": "github:dilame/instagram-private-api",
     "shuffle-array": "^1.0.1"
   },
   "devDependencies": {
