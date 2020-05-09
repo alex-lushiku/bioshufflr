@@ -25,7 +25,7 @@ Property | Description
  `shuffle` | determines whether the content should be shuffled or displayed in order of input.
  `content` | is an array containing your biographies Bioshufflr should iterate through.
 
-__*__ Don't forget to add `\n` after your prefix or before your affix if you want to insert a new line. Same goes for `\"` If you want to insert quotes.
+__*__ Don't forget to add `\n` after your prefix or before your affix if you want to insert a new line. Use `\"` if you want to insert quotes.
 __**__ Instagram's API has a rate limit of 200 requests per hour
 
 2. Run `npm i` to install all corresponding packages.
